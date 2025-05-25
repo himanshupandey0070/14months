@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Romantic Message</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('https://i.imgur.com/A8eQsll.jpg'); /* Floral background */
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-6 backdrop-blur-sm">
+
+  <!-- 💌 Main Romantic Message Section -->
+  <div class="bg-pink-100/80 border-4 border-pink-300 rounded-2xl p-8 text-center shadow-xl max-w-lg">
+    <h1 class="text-3xl font-bold text-pink-700 mb-4">Happy 14 months of our gulu mulu relationnship babyyyyy😁....heehehe 😁😁😁 thoda late per socha bana du kuch ache se dekhna okieeeee 💌</h1>
+    <p class="text-pink-800 text-lg">Every second with you is a flower blooming in my heart and this heart only beongs to you🌸</p>
+  </div>
+
+  <!-- 💫 Interactive Section -->
+  <div class="mt-10 bg-white/80 rounded-xl shadow-md p-6 max-w-xl w-full text-center">
+    <h2 class="text-2xl font-semibold text-rose-600 mb-4">Choose randomly 🌷</h2>
+    <div class="flex justify-center space-x-4 mb-4">
+      <button onclick="showContent(0)" class="bg-rose-300 hover:bg-rose-400 text-white px-4 py-2 rounded-full">Memory 1</button>
+      <button onclick="showContent(1)" class="bg-rose-300 hover:bg-rose-400 text-white px-4 py-2 rounded-full">Memory 2</button>
+      <button onclick="showContent(2)" class="bg-rose-300 hover:bg-rose-400 text-white px-4 py-2 rounded-full">Memory 3</button>
+    </div>
+
+    <div id="contentBox" class="p-4 border-2 border-rose-200 rounded-xl text-rose-700 bg-rose-50">
+      <p>Ummmm bas 3 chije hamari randomly hehehehe ✨</p>
+    </div>
+  </div>
+
+  <script>
+    const messages = [
+      {
+        text: "Our first video call still lives rent free in my heart 💖 wo hamara ek dusre ko dekhke sharmana 2 minute ki vc ke liye preparation hayeeeeeeeeeeeeeeeee",
+        image: "firstvc.jpg"
+      },
+      {
+        text: "That night 🌙 when you wished me happy birthday 🎂 lol the happiest day for me 🫠 muje ni laga tha mere liye ese karega koi but you did. Mere pas pic ni hai wo but har ek second yad hai uska to❤️",
+        image: "us.jpg"
+      },
+      {
+        text: " And the most important thing is US 🫀. Hum ekdam mast and perfect hai baby and hume hamesha sath rehna hai 🫂. I never wanna loose you in my worst nnightmare 🙃. Hamesha mere sath rehna <b> i love you soooooooooo much💕",
+        image: "agreement.jpg"
+      }
+    ];
+
+    function showContent(index) {
+      const box = document.getElementById("contentBox");
+      box.innerHTML = `
+        <p class="mb-4">${messages[index].text}</p>
+        <img src="${messages[index].image}" class="rounded-xl w-full h-auto" alt="Romantic Memory">
+      `;
+    }
+  </script>
+</body>
+</html>
